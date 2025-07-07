@@ -1,0 +1,86 @@
+<div class="compact-banner">
+  <div class="overlay"></div>
+
+  <nav class="nav">
+    <div class="logo">
+      <span class="main">DOMINION</span><br />
+      <span class="sub">CAFE · RESTAURANT</span>
+    </div>
+    <ul>
+      <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/menu">Menu</a></li>
+     <li><a routerLink="/reserve">Reservations</a></li>
+    <li><a routerLink="/contact">Contact</a></li>
+   
+    </ul>
+  </nav>
+
+  <div class="banner-text">
+    <h1>Book a Reservation</h1>
+    <p>Secure your table & pre-order your meal</p>
+  </div>
+</div>
+
+
+<div class="reservation-container">
+  <h2>Book Your Reservation</h2>
+
+  <form (ngSubmit)="submitReservation()">
+    <div class="form-section">
+      <input type="text" placeholder="Full Name" [(ngModel)]="reservation.name" name="name" required />
+      <input type="email" placeholder="Email" [(ngModel)]="reservation.email" name="email" required />
+      <input type="tel" placeholder="Phone Number" [(ngModel)]="reservation.phone" name="phone" required />
+      <input type="number" min="1" placeholder="Number of Guests" [(ngModel)]="reservation.guests" name="guests" />
+      <input type="date" [(ngModel)]="reservation.date" name="date" required />
+      <input type="time" [(ngModel)]="reservation.time" name="time" required />
+    </div>
+
+    <h3>Pre-Order Your Meal</h3>
+    <div class="order-section">
+      <select [(ngModel)]="selectedFoodId" name="food">
+        <option [value]="null">Select Food</option>
+        <option *ngFor="let item of foodMenu" [value]="item.id">{{ item.name }}</option>
+      </select>
+      <input type="number" min="1" [(ngModel)]="quantity" name="quantity" placeholder="Qty" />
+      <button type="button" (click)="addToOrder()">Add</button>
+    </div>
+
+    <ul class="order-list">
+      <li *ngFor="let item of orderList">
+        {{ item.food }} — {{ item.quantity }}
+      </li>
+    </ul>
+
+    <button type="submit" class="submit-btn">Confirm Reservation</button>
+  </form>
+</div>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-branding">
+      <h2 class="footer-title">Dominion Cafe Restau</h2>
+      <p class="footer-tagline">Where taste meets royalty</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/menu">Menu</a></li>
+        <li><a routerLink="/reservations">Reservations</a></li>
+        <li><a routerLink="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p>📍 Limbe, Cameroon</p>
+      <p>📞 +237 6 78 90 12 34</p>
+      <p>📧 dominioncafe&#64;example.com</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Dominion Cafe Restau. All rights reserved.</p>
+  </div>
+</footer>
+

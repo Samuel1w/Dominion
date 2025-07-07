@@ -1,0 +1,84 @@
+<section class="menu-hero">
+<nav class="nav">
+  <div class="logo">
+  <span class="main">DOMINION</span>
+  <span class="sub">Cafe - Restaurant</span>
+</div>
+    <ul>
+     <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/menu">Menu</a></li>
+     <li><a routerLink="/reserve">Reservations</a></li>
+    <li><a routerLink="/contact">Contact</a></li>
+   
+    
+
+    </ul>
+</nav>
+
+  <div class="menu-hero-content">
+    <h1>Dominion Cafe Menu</h1>
+    <p>Delight in our daily dishes, crafted with love & tradition</p>
+  </div>
+</section>
+
+<section class="breakfast-section">
+  <h2>Breakfast – Served Daily (7AM – 11AM)</h2>
+  <div class="breakfast-grid">
+    <div class="breakfast-card" style="width: 210px; height: 200px;">
+      <img src="../../assets/tb.jpg" alt="Pancakes & Coffee" style="width: 200px;" />
+      <h3>Bread and tea</h3>
+    </div>
+    <div class="breakfast-card"  style="width: 210px; height: 200px;"  >
+      <img src="../../assets/spi.jpeg" alt="Omelette & Toast" style="width: 200px; height:165px;" />
+      <h3>Omelette & Toast</h3>
+    </div>
+    <div class="breakfast-card" style="width: 210px; height: 200px;">
+      <img src="../../assets/spag.jpeg" alt="Fruit Bowl"  style="width: 200px; height:165px;"/>
+      <h3>Spaghetti and Eggs</h3>
+    </div>
+  </div>
+</section>
+
+<section class="weekly-menu">
+  <h2>Weekly Specials</h2>
+  <div class="day-menu" *ngFor="let day of weeklyMenu">
+    <h3>{{ day.dayName }}</h3>
+    <div class="menu-item" *ngFor="let item of day.items">
+      <img [src]="item.image" [alt]="item.name" class="menu-item-image" />
+      <div class="menu-item-info">
+        <h4>{{ item.name }}</h4>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-branding">
+      <h2 class="footer-title">Dominion Cafe Restau</h2>
+      <p class="footer-tagline">Where taste meets royalty</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/menu">Menu</a></li>
+        <li><a routerLink="/reservations">Reservations</a></li>
+        <li><a routerLink="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p>📍 Limbe, Cameroon</p>
+      <p>📞 +237 6 78 90 12 34</p>
+      <p>📧 dominioncafe&#64;example.com</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Dominion Cafe Restau. All rights reserved.</p>
+  </div>
+</footer>
+

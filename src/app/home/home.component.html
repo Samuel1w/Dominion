@@ -1,0 +1,202 @@
+<header class="hero">
+
+  <nav class="nav">
+  <div class="logo">
+  <span class="main">DOMINION</span>
+  <span class="sub">Cafe - Restaurant</span>
+</div>
+    <ul>
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/menu">Menu</a></li>
+     <li><a routerLink="/reserve">Reservations</a></li>
+    <li><a routerLink="/contact">Contact</a></li>
+    
+
+    </ul>
+  </nav>
+  <div class="slider"></div>
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Experience Culinary Elegance</h1>
+    <p>Enjoy unique dishes crafted with passion</p>
+    <button>View Menu</button>
+    <button>Book Table</button>
+  </div>
+</header>
+<section class="featured">
+  <h2 style="text-align: center; padding: 10px;">Featured Dishes</h2>
+
+
+  <div class="menu-buttons">
+    <button class="btn" (click)="showCategory('all')">All menu</button>
+    <button class="btn" (click)="showCategory('breakfast')">Breakfast</button>
+    <button class="btn" (click)="showCategory('lunch')">Lunch</button>
+  </div>
+
+  <div class="dropdown" *ngIf="activeCategory === 'all'">
+    <div class="item" *ngFor="let dish of allMenu">
+      <img [src]="dish.image" alt="dish" style="width: 250px; height: 200px">
+      <p>{{ dish.name }}</p>
+    </div>
+  </div>
+
+  <div class="dropdown" *ngIf="activeCategory === 'breakfast'">
+    <div class="item" *ngFor="let dish of breakfastMenu">
+      <img [src]="dish.image" alt="dish" style="width: 250px; height: 200px">
+      <p>{{ dish.name }}</p>
+    </div>
+  </div>
+
+  <div class="dropdown" *ngIf="activeCategory === 'lunch'">
+    <div class="item" *ngFor="let dish of lunchMenu">
+      <img [src]="dish.image" alt="dish" style="width: 250px; height: 200px">
+      <p>{{ dish.name }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="why-dine-section">
+  <div class="why-dine-container">
+    <!-- Card 1 -->
+    <div class="why-dine-card">
+      <div class="text" >
+        <h2>Exceptional Ambience</h2>
+        <p>Our dining space is designed to create a warm, inviting experience where memories are made over great food.</p>
+      </div>
+      <div class="image">
+        <img src="../../assets/pexels-helenalopes-696218.jpg" alt="Ambience">
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="why-dine-card reverse">
+      <div class="text2" >
+        <h2>Chef-Curated Dishes</h2>
+        <p>Our meals are crafted by experienced chefs using only the finest, fresh ingredients to deliver exquisite taste every time.</p>
+      </div>
+      <div class="image">
+        <img src="../../assets/pexels-pixabay-262978.jpg" alt="Chef Quality">
+      </div>
+     
+    </div>
+  </div>
+</section>
+
+<section class="le-nom-section">
+  <div class="container">
+    <div class="image image-left">
+      <img src="../../assets/m.jpg" alt="Left Image">
+    </div>
+    <div class="text-content" [@bounceLeftRight]="'run'">
+
+      <h2>Welcome to Dominion Café Restau  </h2>
+      <p>
+      Nestled in the heart of Limbe, Cameroon, Dominion Café Restau offers a unique fusion of local and continental cuisine in a cozy, elegant setting. Whether you're in the mood for a hearty Cameroonian dish, a fresh seafood platter, or a perfectly brewed cup of coffee, our menu is crafted to satisfy every palate.  
+
+With warm hospitality, stylish decor, and a passion for quality, Dominion Café Restau is the perfect spot for casual brunches, romantic dinners, or business meetings. Come for the food, stay for the experience.
+      </p>
+    </div>
+    <div class="image image-right">
+      <img src="../../assets/m.jpg" alt="Right Image">
+    </div>
+  </div>
+</section>
+
+<section class="reservation-section">
+  <div class="reservation-container">
+    <h2 class="reservation-title">Reserve Your Spot at Dominion Café</h2>
+    <p class="reservation-description">
+      Whether you're planning a romantic evening, a business lunch, or a weekend brunch with friends, Dominion Café offers the perfect setting. Book your table in advance and let us make your dining experience unforgettable.
+    </p>
+    <a routerLink="/reservation" class="reservation-button">Make a Reservation</a>
+  </div>
+</section>
+<section class="food-carousel-section">
+  <div class="carousel">
+    <div class="carousel-item" *ngFor="let slide of slides; let i = index" [class.active]="i === currentIndex">
+      <img [src]="slide.image" [alt]="slide.label">
+      <div class="carousel-text">{{ slide.label }}</div>
+    </div>
+  </div>
+</section>
+
+<section class="featured-menu-section">
+  <h2 class="section-title">Our Featured Menu</h2>
+  <div class="menu-grid">
+    <div class="menu-card" *ngFor="let item of featuredMenu">
+      <img [src]="item.image" [alt]="item.name" />
+      <div class="menu-info">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+
+   <div class="menu-link-container">
+    <p class="menu-link-text">Want more? View our complete menu below.</p>
+    <button class="menu-link-button" routerLink="/menu">View Full Menu</button>
+  </div>
+</section>
+
+<section class="opening-hours-section">
+  <div class="opening-hours-container">
+    <h2 class="opening-hours-title">Opening Hours</h2>
+    <p class="opening-hours-subtext">We’re always ready to serve you</p>
+    
+    <div class="hours-table">
+      <div class="hours-row">
+        <span class="day">Tuesday – Friday</span>
+        <span class="time">8:00 AM – 10:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="day">Saturday</span>
+        <span class="time">8:00 AM – 11:00 PM</span>
+      </div>
+      <div class="hours-row">
+        <span class="day">Sunday</span>
+        <span class="time">9:00 PM – 9:00 PM</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-branding">
+      <h2 class="footer-title">Dominion Cafe Restau</h2>
+      <p class="footer-tagline">Where taste meets royalty</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/menu">Menu</a></li>
+        <li><a routerLink="/reservations">Reservations</a></li>
+        <li><a routerLink="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p>📍 Limbe, Cameroon</p>
+      <p>📞 +237 6 78 90 12 34</p>
+      <p>📧 dominioncafe&#64;example.com</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Dominion Cafe Restau. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+ 
+
+
+
+

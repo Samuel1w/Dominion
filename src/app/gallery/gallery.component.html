@@ -1,0 +1,15 @@
+<div class="gallery-container">
+  <h2 class="gallery-title">Gallery</h2>
+  <p class="subtitle">A Taste of Elegance – Moments Captured at Dominion Cafe Restau</p>
+
+  <div class="gallery-grid">
+    <div class="gallery-card" *ngFor="let image of galleryImages">
+      <div class="image-wrapper">
+        <img [src]="image.src" [alt]="image.caption" />
+        <div class="overlay">
+          <p>{{ image.caption }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+<div class="compact-banner">
+  <div class="overlay"></div>
+
+  <nav class="nav">
+    <div class="logo">
+      <span class="main">DOMINION</span><br />
+      <span class="sub">CAFE · RESTAURANT</span>
+    </div>
+    <ul>
+     <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/menu">Menu</a></li>
+     <li><a routerLink="/reserve">Reservations</a></li>
+    <li><a routerLink="/contact">Contact</a></li>
+   </ul>
+  </nav>
+
+  <div class="banner-text">
+    <h1>Reach us</h1>
+    <p>Get to us via phone or email</p>
+  </div>
+</div>
+
+
+<div class="contact-container">
+  <h2 class="title">Get In Touch</h2>
+  <p class="subtitle">We’d love to hear from you. Reach out or pay us a visit!</p>
+
+  <div class="contact-grid">
+    <!-- Contact Form -->
+    <form (ngSubmit)="sendMessage()" class="contact-form">
+      <input type="text" [(ngModel)]="contact.name" name="name" placeholder="Your Name" required />
+      <input type="email" [(ngModel)]="contact.email" name="email" placeholder="Your Email" required />
+      <input type="text" [(ngModel)]="contact.subject" name="subject" placeholder="Subject" />
+      <textarea [(ngModel)]="contact.message" name="message" placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h3>Visit Us</h3>
+      <p><strong>Address:</strong> 123 Gold Street, Buea, Cameroon</p>
+      <p><strong>Phone:</strong> +237 6XX XXX XXX</p>
+      <p><strong>Email:</strong> hello&#64;dominioncafe.com</p>
+      <p><strong>Opening Hours:</strong><br>
+         Mon - Sat: 8:00am - 10:00pm<br>
+         Sun: 12:00pm - 8:00pm
+      </p>
+
+      <div class="map-container">
+        <!-- You can replace this with a real embedded map iframe -->
+        <iframe
+          src="https://maps.google.com/maps?q=limbe%20cameroon&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-branding">
+      <h2 class="footer-title">Dominion Cafe Restau</h2>
+      <p class="footer-tagline">Where taste meets royalty</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/menu">Menu</a></li>
+        <li><a routerLink="/reservations">Reservations</a></li>
+        <li><a routerLink="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p>📍 Limbe, Cameroon</p>
+      <p>📞 +237 6 78 90 12 34</p>
+      <p>📧 dominioncafe&#64;example.com</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Dominion Cafe Restau. All rights reserved.</p>
+  </div>
+</footer>

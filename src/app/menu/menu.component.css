@@ -1,0 +1,265 @@
+/* Hero Section */
+.menu-hero {
+  background-image: url('../../assets/kit3.jpeg');
+  background-size: cover;
+  background-position: center;
+ padding: 2rem;
+  text-align: center;
+  color: white;
+  background-color: #000000a0;
+}
+
+.menu-hero-content {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.menu-hero h1 {
+  font-size: 3rem;
+  color: #b8860b;
+  font-family: 'Georgia', serif;
+}
+
+.menu-hero p {
+  font-size: 1.2rem;
+  color: #fff3dc;
+}
+
+/* Breakfast Section */
+.breakfast-section {
+  
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.breakfast-section h2 {
+  color: #b8860b;
+  margin-bottom: 2rem;
+}
+
+.breakfast-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.breakfast-card {
+  background-color: #3a2e1e;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 220px;
+}
+
+.breakfast-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.breakfast-card h3 {
+  margin-top: 0.8rem;
+  color: #d2b48c;
+}
+
+/* Weekly Menu Section */
+.weekly-menu {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 4rem 2rem;
+}
+
+.weekly-menu h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #b8860b;
+  margin-bottom: 2rem;
+}
+
+.day-menu {
+  margin-bottom: 2.5rem;
+  background-color: #2d2d2d;
+  padding: 1.5rem;
+  border-left: 4px solid #b8860b;
+  border-radius: 8px;
+}
+
+.day-menu h3 {
+  color: #d2b48c;
+  margin-bottom: 1rem;
+}
+
+.day-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.day-menu li {
+  margin-bottom: 0.7rem;
+  line-height: 1.5;
+}
+.menu-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+  background-color: #3a2e1e;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.menu-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #b8860b;
+}
+
+.menu-item-info h4 {
+  color: #b8860b;
+  margin: 0 0 0.3rem;
+}
+
+.menu-item-info p {
+  color: #eee;
+  margin: 0;
+}
+
+.nav {
+    margin-top:0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav ul a{
+      z-index: 2;
+  color: white;
+  text-decoration: none;
+}
+
+.nav ul {
+
+    position: relative;
+  z-index: 2; /* sits above overlay */
+  font-weight: bold;
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+.nav ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #b8860b40; /* semi-transparent gold */
+  z-index: 0;
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  color: #d4af37;
+  font-weight: bold;
+  text-align: left;
+   position: relative;
+  z-index: 2; /* sits above overlay */
+}
+
+
+.logo .main {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+.logo .sub {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #fff;
+  display: block;
+  margin-top: -4px;
+  letter-spacing: 1px;
+}
+.footer {
+  background-color: #1a1a1a; /* black background */
+  color: white;
+  padding-top: 3rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  border-top: 4px solid #b8860b;
+  padding-bottom: 2rem;
+}
+
+.footer-branding {
+  flex: 1 1 250px;
+}
+
+.footer-title {
+  font-size: 1.8rem;
+  color: #b8860b;
+  margin-bottom: 0.5rem;
+  font-family: 'Georgia', serif;
+}
+
+.footer-tagline {
+  font-style: italic;
+  color: #d2b48c;
+}
+
+.footer-links, .footer-contact {
+  flex: 1 1 200px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  color: #b8860b;
+  margin-bottom: 1rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #b8860b;
+}
+
+.footer-contact p {
+  margin: 0.4rem 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #111;
+  color: #b8860b;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
+
+
